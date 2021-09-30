@@ -1,0 +1,42 @@
+{
+  "name": "@halospv3/shared",
+  "description": "Automate commit messages quality, automate changelog and release generation",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.0",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/github": "^8.0.1",
+    "commitizen": "^4.2.4",
+    "conventional-changelog-conventionalcommits": "^4.6.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^7.0.2",
+    "semantic-release": "^18.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    },
+    "husky": {
+      "hooks": {
+        "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+      }
+    }
+  },
+  "scripts": {
+    "cm": "cz",
+    "prepare": "husky install"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halospv3/hce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/halospv3/hce/issues"
+  },
+  "homepage": "https://github.com/halospv3/hce#readme"
+}
