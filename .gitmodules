@@ -2,18 +2,22 @@
 	path = ext/chimera
 	url = https://github.com/SnowyMouse/chimera.git
 	branch = master
+	ignore = all
 [submodule "ext/halo-ce-patches"]
 	path = ext/halo-ce-patches
 	url = https://github.com/pR0Ps/halo-ce-patches.git
 	branch = master
+	ignore = all
 [submodule "ext/xidi"]
 	path = ext/xidi
 	url = https://github.com/samuelgr/Xidi.git
 	branch = master
+	ignore = all
 [submodule "spv3"]
 	path = spv3
 	url = https://github.com/HaloSPV3/SPV3-Loader.git
 	branch = main
+	ignore = all
 [submodule "hxe"]
 	path = hxe
 	url = https://github.com/HaloSPV3/HXE.git
