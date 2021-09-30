@@ -1,14 +1,15 @@
-# Docs: https://gitversion.net/docs/reference/configuration
-assembly-versioning-scheme: MajorMinorPatch
-mode: ContinuousDelivery
+# https://github.com/GitTools/GitVersion/blob/main/docs/input/docs/reference/configuration.md
+mode: ContinuousDeployment
+tag-prefix: '[vV]'
+major-version-bump-message: "^(breaking|build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\\([\\w\\s]*\\))?(!:|:.*\\n\\n((.+\\n)+\\n)?BREAKING CHANGE:\\s.+)"
+minor-version-bump-message: "^(feat)(\\([\\w\\s]*\\))?:"
+patch-version-bump-message: "^(fix|perf)(\\([\\w\\s]*\\))?:"
 branches:
-  master: {}
-  main: {}
-  develop: {}
+  develop:
+    increment: none # IMPORTANT
+  main:
+    increment: none # IMPORTANT
+    is-release-branch: true
 ignore:
   sha: []
 merge-message-formats: {}
-buildMetaData: 399
-major-version-bump-message: "^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\\([\\w\\s]*\\))?(!:|:.*\\n\\n((.+\\n)+\\n)?BREAKING CHANGE:\\s.+)"
-minor-version-bump-message: "^(feat)(\\([\\w\\s]*\\))?:"
-patch-version-bump-message: "^(build|chore|ci|docs|fix|perf|refactor|revert|style|test)(\\([\\w\\s]*\\))?:"
