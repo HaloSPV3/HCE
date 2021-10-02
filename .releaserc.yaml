@@ -1,0 +1,32 @@
+{
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  # docs: https://semantic-release.gitbook.io/semantic-release/usage/workflow-configuration#branch-types
+  "branches": ["halospv3/shared"],
+  "tagFormat": "sharedConfig/v{version}",
+  "plugins": [
+    ["@semantic-release/commit-analyzer",{
+      # docs: https://github.com/semantic-release/commit-analyzer/blob/master/lib/default-release-rules.js
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]
+      },
+      "preset": "conventionalcommits",
+      "presetConfig": [ ],
+      "releaseRules": [
+        {"type": "revert", "subject": "!(feat|fix|perf)*", "release": false},
+        {"type": "revert", "subject": "(build|chore|ci|docs|refactor|revert|style|test)*", "release": false},
+        {"type": "chore", "scope": "deps", "release": "patch"}
+      ]
+    }],
+    ["@semantic-release/release-notes-generator",{
+      "parserOpts": {
+        "noteKeywords": ["BREAKING CHANGE", "BREAKING CHANGES", "BREAKING"]},
+      "preset": "conventionalcommits",
+      "presetConfig": [ ]
+    }],
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
+}
