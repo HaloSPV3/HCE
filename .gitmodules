@@ -13,6 +13,11 @@
 	url = https://github.com/samuelgr/Xidi.git
 	branch = master
 	ignore = all
+[submodule "projects/amaisosu"]
+	path = projects/amaisosu
+	url = https://github.com/HaloSPV3/AmaiSosu.git
+	branch = main
+	ignore = all
 [submodule "spv3"]
 	path = spv3
 	url = https://github.com/HaloSPV3/SPV3-Loader.git
