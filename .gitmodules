@@ -18,13 +18,13 @@
 	url = https://github.com/HaloSPV3/AmaiSosu.git
 	branch = main
 	ignore = all
-[submodule "spv3"]
-	path = spv3
-	url = https://github.com/HaloSPV3/SPV3-Loader.git
+[submodule "projects/hxe"]
+	path = projects/hxe
+	url = https://github.com/HaloSPV3/HXE.git
 	branch = main
 	ignore = all
-[submodule "hxe"]
-	path = hxe
-	url = https://github.com/HaloSPV3/HXE.git
+[submodule "projects/spv3/loader"]
+	path = projects/spv3/loader
+	url = https://github.com/HaloSPV3/SPV3.Loader.git
 	branch = main
 	ignore = all
