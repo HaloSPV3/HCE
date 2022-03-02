@@ -1,0 +1,19 @@
+﻿name: Conventional Pull Request
+# See https://github.com/Namchee/conventional-pr
+
+on:
+  pull_request:
+permissions:
+  checks: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  cpr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: conventional-pr
+        uses: Namchee/conventional-pr@v0.9.0
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+          ignored_users: snyk-bot
